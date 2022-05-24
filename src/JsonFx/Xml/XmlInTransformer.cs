@@ -52,9 +52,9 @@ namespace JsonFx.Xml
 			private const string ErrorUnterminatedObject = "Unterminated object";
 			private const string ErrorInvalidAttribute = "Invalid attribute value token ({0})";
 
-			private static DataName DefaultObjectName = new DataName(typeof(Object));
-			private static DataName DefaultArrayName = new DataName(typeof(Array));
-			private static DataName DefaultItemName = new DataName("item");
+			private static readonly DataName DefaultObjectName = new DataName(typeof(Object));
+			private static readonly DataName DefaultArrayName = new DataName(typeof(Array));
+			private static readonly DataName DefaultItemName = new DataName("item");
 
 			#endregion Constants
 

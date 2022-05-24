@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3082284b-b579-4808-a4a4-d88dda4025cb": {
+      "ProjectGuid": "3082284b-b579-4808-a4a4-d88dda4025cb",
+      "DisplayName": "JsonFx",
+      "ColorIndex": 0
+    },
+    "0b5cb626-ac40-4cad-bded-51b539f19233": {
+      "ProjectGuid": "0b5cb626-ac40-4cad-bded-51b539f19233",
+      "DisplayName": "JsonFx.Tests",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

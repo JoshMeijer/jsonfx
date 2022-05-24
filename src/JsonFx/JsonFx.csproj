@@ -9,11 +9,9 @@
     <ProjectGuid>{3082284B-B579-4808-A4A4-D88DDA4025CB}</ProjectGuid>
     <ProjectTypeGuids Condition=" '$(TargetFrameworkIdentifier)' == 'Silverlight' ">{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <ProjectTypeGuids Condition=" '$(TargetFrameworkProfile)' == 'WindowsPhone' ">{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
-    
     <PlatformID Condition=" '$(TargetFrameworkIdentifier)' == 'netcf' ">b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
     <PlatformFamilyName Condition=" '$(TargetFrameworkIdentifier)' == 'netcf' ">PocketPC</PlatformFamilyName>
     <TargetFrameworkVersion Condition=" '$(TargetFrameworkIdentifier)' == 'netcf' ">v3.5</TargetFrameworkVersion>
-
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>JsonFx</RootNamespace>
@@ -91,6 +89,12 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFrameworkProfile)' == 'WindowsPhone' ">
     <DefineConstants>$(DefineConstants);WINDOWS_PHONE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>JsonFxKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == 'Silverlight' ">
     <Reference Include="mscorlib" />
@@ -227,7 +231,9 @@
     <Compile Include="Linq\QueryProvider.cs" />
     <Compile Include="Linq\Query`1.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="JsonFxKey.pfx" />
+  </ItemGroup>
   <Import Condition=" '$(TargetFrameworkIdentifier)' != 'Silverlight' and '$(TargetFrameworkIdentifier)' != 'netcf' " Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Condition=" '$(TargetFrameworkIdentifier)' == 'netcf' " Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <Import Condition=" '$(TargetFrameworkIdentifier)' == 'Silverlight' And '$(TargetFrameworkProfile)' != 'WindowsPhone' And '$(TargetFrameworkVersion)' == 'v3.5' " Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\v3.0\Microsoft.Silverlight.CSharp.targets" />
